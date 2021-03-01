@@ -1,46 +1,5 @@
-footer {
-  .top {
-    @include container;
-    padding: $s-100;
-    background-color: $l-grey;
-    .container {
-      @include flex(space-between);
-    }
-    ul {
-      @include flex(space-between);
-      flex-direction: column;
-      li {
-        line-height: 2;
-        color: $grey;
-        cursor: pointer;
-        &:first-child {
-          color: $black;
-          font-size: 16px;
-          margin-bottom: $s-5;
-        }
-        &:hover:not(:first-child) {
-          color: darken($grey, 20%);
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  .bottom {
-    background-color: $black;
-    @include container;
-    ul{
-      height: $s-100;
-      @include flex(flex-end);
-      li {
-        margin: 0 $s-10;
-        color: $white;
-        a {
-          color: $grey;
-          &:hover {
-            color: $white;
-          }
-        }
-      }
-    }
-  }
+main {
+  padding: 100px 0;
+  background-color: $blue;
+  @include container;
 }

@@ -13,14 +13,24 @@ include 'php-partials/db.php';
 </head>
 <body>
 
-  <?php foreach ($cds as $cd) { ?>
-    <div class="box">
-      <img src="<?php echo $cd['img'] ?>" alt="<?php echo $cd['title'] ?>">
-      <div class="title"><?php echo $cd['title'] ?></div>
-      <div class="author"><?php echo $cd['author'] ?></div>
-      <div class="year"><?php echo $cd['year'] ?></div>
+  <header>
+    <div class="container">
+      <img src="dist/img/logo.png" alt="Logo">
     </div>
-  <?php } ?>
+  </header>
+
+  <main>
+    <div class="container">
+      <?php foreach ($cds as $cd) { ?>
+        <div class="box">
+          <img src="<?php echo $cd['img'] ?>" alt="<?php echo $cd['title'] ?>">
+          <div class="title"><?php echo $cd['title'] ?></div>
+          <div class="author"><?php echo $cd['author'] ?></div>
+          <div class="year"><?php echo $cd['year'] ?></div>
+        </div>
+      <?php } ?>
+    </div>
+  </main>
 
   <script src="dist/app.js" charset="utf-8"></script>
 </body>

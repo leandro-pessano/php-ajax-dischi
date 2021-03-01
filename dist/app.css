@@ -1,1 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
 
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: calc(60px + 10px);
+  background-color: #2E3A46;
+}
+header .container {
+  width: 75%;
+  margin: 0 auto;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .container img {
+  height: 50px;
+}
+
+main {
+  padding: 100px 0;
+  background-color: #1E2D3B;
+}
+main .container {
+  width: 75%;
+  margin: 0 auto;
+}

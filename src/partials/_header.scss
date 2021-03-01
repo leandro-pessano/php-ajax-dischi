@@ -1,49 +1,12 @@
 header {
+  height: calc(#{$s-20 * 3} + #{$s-10});
+  background-color: $l-blue;
   @include container;
-  background-color: $black;
-  .top ul {
-    height: $s-40;
-    @include flex(flex-end);
-    li:hover a {
-      color: $white;
-      text-decoration: underline;
-    }
-    i {
-      color: $l-blue;
-    }
-    a {
-      color: $grey;
-      margin-left: $s-10;
-      margin-right: calc(#{$s-10 * 3});
-    }
-  }
-  .bottom>ul {
-    height: calc(#{$s-10 * 5});
-    @include flex();
-    >li {
-      @include flex();
-      margin: 0 $s-10;
-      padding: 0 calc(#{$s-10 *2});
-      height: 100%;
-      a {
-        font-size: 14px;
-        color: $white;
-      }
-      &:hover:not(:first-child) {
-        background-color: $white;
-        cursor: pointer;
-        a {
-          color: $black;
-        }
-      }
-      &:first-child {
-        padding: 0;
-        margin-bottom: $s-10;
-        a {
-          margin: 0;
-          font-size: calc(#{$s-10 * 3});
-        }
-      }
+  .container {
+    height: $p-100;
+    @include flex;
+    img {
+      height: 50px;
     }
   }
 }
