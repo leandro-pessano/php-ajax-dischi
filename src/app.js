@@ -5,7 +5,7 @@ var app = new Vue ({
   },
   mounted() {
     axios
-    .get('server.php')
+    .get('php-partials/server.php')
     .then(result => {
       this.cds = result.data;
       console.log(result.data);

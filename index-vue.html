@@ -22,11 +22,11 @@
   <main id="root">
     <div class="container">
 
-        <div class="box">
-          <img src="" alt="">
-          <h2 class="title"></h2>
-          <div class="author"></div>
-          <div class="year"></div>
+        <div v-for="cd in cds" class="box">
+          <img :src="cd.img" alt="cd.title">
+          <h2 class="title">{{cd.title}}</h2>
+          <div class="author">{{cd.author}}</div>
+          <div class="year">{{cd.year}}</div>
         </div>
 
     </div>
