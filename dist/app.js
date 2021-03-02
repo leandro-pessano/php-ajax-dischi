@@ -7,7 +7,20 @@
   \********************/
 /***/ (() => {
 
+var app = new Vue({
+  el: '#root',
+  data: {
+    cds: []
+  },
+  mounted: function mounted() {
+    var _this = this;
 
+    axios.get('server.php').then(function (result) {
+      _this.cds = result.data;
+      console.log(result.data);
+    });
+  }
+});
 
 /***/ }),
 
