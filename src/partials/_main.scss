@@ -1,6 +1,5 @@
 main {
   padding: 100px 0;
-  background-color: $blue;
   @include container;
   .container {
     @include flex;

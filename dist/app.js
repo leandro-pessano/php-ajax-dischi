@@ -10,14 +10,21 @@
 var app = new Vue({
   el: '#root',
   data: {
-    cds: []
+    cds: [],
+    genreList: [],
+    selectedGenre: 'All'
   },
   mounted: function mounted() {
     var _this = this;
 
     axios.get('php-partials/server.php').then(function (result) {
       _this.cds = result.data;
-      console.log(result.data);
+
+      _this.cds.forEach(function (e, i) {
+        if (!_this.genreList.includes(e.genre)) {
+          _this.genreList.push(e.genre);
+        }
+      });
     });
   }
 });

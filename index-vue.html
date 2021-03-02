@@ -13,24 +13,32 @@
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <img src="dist/img/logo.png" alt="Logo">
-    </div>
-  </header>
+  <div id="root">
 
-  <main id="root">
-    <div class="container">
+    <header>
+      <div class="container">
+        <img src="dist/img/logo.png" alt="Logo">
+        <select v-model="selectedGenre">
+          <option value="All">All</option>
+          <option v-for="genre in genreList" :value="genre"> {{genre}} </option>
+        </select>
+      </div>
+    </header>
 
-        <div v-for="cd in cds" class="box">
-          <img :src="cd.img" alt="cd.title">
-          <h2 class="title">{{cd.title}}</h2>
-          <div class="author">{{cd.author}}</div>
-          <div class="year">{{cd.year}}</div>
-        </div>
+    <main>
+      <div class="container">
 
-    </div>
-  </main>
+          <div v-if="cd.genre == selectedGenre || selectedGenre == 'All'" v-for="cd in cds" class="box">
+            <img :src="cd.img" alt="cd.title">
+            <h2 class="title">{{cd.title}}</h2>
+            <div class="author">{{cd.author}}</div>
+            <div class="year">{{cd.year}}</div>
+          </div>
+
+      </div>
+    </main>
+
+  </div>
 
   <script src="dist/app.js" charset="utf-8"></script>
 </body>
